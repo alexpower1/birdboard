@@ -29,7 +29,7 @@
         <server name="MAIL_DRIVER" value="array"/>
         <server name="QUEUE_CONNECTION" value="sync"/>
         <server name="SESSION_DRIVER" value="array"/>
-        <server name="DB_CONNECITON" value="sqlite"/>
-        <server name="DB_NAME" value=":memory:"/>
+        <server name="DB_CONNECITON" value="mysql"/>
+        <server name="DB_NAME" value="birdboard"/>
     </php>
 </phpunit>
