@@ -15,9 +15,10 @@ class ProjectsTest extends TestCase
     {
         $project = factory('App\Project')->create();
 
-        $this->post('/projects', $project->toArray())->assertRedirect('login');
         $this->get('/projects')->assertRedirect('login');
+        $this->get('/projects/create')->assertRedirect('login');
         $this->get($project->path())->assertRedirect('login');
+        $this->post('/projects', $project->toArray())->assertRedirect('login');
     }
 
     /** @test */
