@@ -2,33 +2,35 @@
 <html>
     <head>
         <title>Birdboard</title>
-        
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     </head>
-    <body>
-        <h1>Create a Project</h1>
+    <body style="padding: 30px">
+        <h1 class="heading is-1">Create a project<h1>
+        
+            <form method="POST" action="/projects" class="container" style="padding-top: 40px">
+                @csrf
 
-        <form>
-            <div class="field">
-                <label for="title" class="label">Title</label>
+                <div class="field">
+                    <label class="label" for="title">Title</label>
 
-                <div class="control">
-                    <input type="text" class="input" name="title" placeholder="Title">
+                    <div class="control">
+                        <input type="text" class="input" name="title" placeholder ="Title">
+                    </div>
                 </div>
-            </div>
 
-            <div class="field">
-                <label for="description" class="label">Description</label>
+                <div class="field">
+                    <label class="label" for="description">Description</label>
 
-                <div class="control">
-                    <input type="text" class="input" name="description" placeholder="Description">
+                    <div class="control">
+                        <textarea name="description" class="textarea"></textarea>
+                    </div>
                 </div>
-            </div>
 
-            <div class="field">
-                <div class="control">
-                    <button type="submit" class="button is-link">Create Project</button>
+                <div class="field">
+                    <div class="control">
+                        <button type="submit" class="button is-link">Create Project</button>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
     </body>
 </html>
