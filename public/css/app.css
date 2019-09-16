@@ -645,6 +645,8 @@ video {
 .card {
   background-color: #fff;
   padding: 1.25rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.08);
 }
 
 .sr-only {
