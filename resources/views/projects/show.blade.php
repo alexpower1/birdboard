@@ -19,11 +19,19 @@
             <div class="lg:w-3/4 px-3 mb-6 lg:mb-0">
                 <div class="mb-8">
                     <h2 class="text-gray-600 text-lg font-normal mb-3">Tasks</h2>
+                    {{-- <div class="card mb-3">Lorem ipsum</div>
                     <div class="card mb-3">Lorem ipsum</div>
                     <div class="card mb-3">Lorem ipsum</div>
                     <div class="card mb-3">Lorem ipsum</div>
-                    <div class="card mb-3">Lorem ipsum</div>
-                    <div class="card">Lorem ipsum</div>
+                    <div class="card">Lorem ipsum</div> --}}
+
+                    @forelse ($project->tasks as $task)
+                        <div class="lg:w-1/3 px-3 pb-6">
+                            @include('tasks.card')
+                        </div>
+                    @empty
+                        <div>No tasks yet.</div>
+                    @endforelse
                 </div>
 
                 <div class="mb-8">
